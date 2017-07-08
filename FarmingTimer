@@ -4,7 +4,7 @@
 #MaxThreadsPerHotkey 2
 
 SplashTextOn, 300, 30, !, Downloading Newest Version. Please wait...
-UrlDownloadToFile, https://raw.githubusercontent.com/bolsilent/ahkscripts/master/FarmingTimer, FarmingTimer.ahk
+UrlDownloadToFile, https://raw.githubusercontent.com/132917/osrsAHK/master/FarmingTimer , FarmingTimer.AHK
 SplashTextOff
 
 IfNotExist %A_WorkingDir%\CamelotGrow.png
@@ -37,18 +37,23 @@ IfNotExist %A_WorkingDir%\CamelotGrow.png
 }
 
 
-Gui, Show, w300 h600, Farmering Tracker
+Gui, Show, w300 h250, Farmering Tracker
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;How Often do you want to click?;;;;;;;;;
-Gui, Add, Text, x0 y0 w300 Left,     Canifis, Camelot, Falador, Ardy, Zeah farming spots
+Gui, Add, Text, x0 y0 w30 Left,     Canifis
+Gui, Add, Text, x50 y0 w30 Left, Camelot
+Gui, Add, Text, x100 y0 w30 Left, Falador
+Gui, Add, Text, x150 y0 w30 Left, Ardougne
+Gui, Add, Text, x200 y0 w50 Left, Zeah||Hosidius
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 Gui, Add, Picture, x0 y20 w50 h50, %A_WorkingDir%\CanifisGrey.png
 Gui, Add, Picture, gToggle1 x0 y20 w50 h50, %A_WorkingDir%\CanifisGrow.png
 
 
 ;;;;;
-Gui, Add, Picture, gToggle2 x50 y20 w50 h50, %A_WorkingDir%\CamelotGrey.png
-Gui, Add, Picture, x50 y20 w50 h50, %A_WorkingDir%\CamelotGrow.png
+Gui, Add, Picture, x50 y20 w50 h50, %A_WorkingDir%\CamelotGrey.png
+Gui, Add, Picture, gToggle2 x50 y20 w50 h50, %A_WorkingDir%\CamelotGrow.png
+
 
 ;;
 Gui, Add, Picture, gToggle3 x100 y20 w50 h50, %A_WorkingDir%\FaladorGrey.png
@@ -91,10 +96,15 @@ sleep, 300
 return
 
 Toggle2:
-sleep, 300
-Gui, Add, Picture, x50 y20 w50 h50, %A_WorkingDir%\CamelotGow.png
-sleep, 4500000
-Msgbox, Your Camelot herb patch is ready to be harvested. 
+Gui, Add, Picture, x50 y20 w50 h50, %A_WorkingDir%\CamelotGrow.png
+sleep, 4500
+SoundBeep, ,500
+sleep, 500
+SoundBeep, ,500
+Gui, Add, Picture, x50 y100 w50 h50, %A_WorkingDir%\Camelot.png
+Gui, Add, Text, x50 y85 w50 left, READY
+sleep, 500
+Msgbox, Your Camelot herb patch is ready to be harvested.  
 
 return
 
@@ -102,22 +112,38 @@ return
 
 
 Toggle3:
-sleep, 300
-Gui, Add, Picture, x100 y20 w50 h50, %A_WorkingDir%\yew.png
-sleep, 300
-Gui, Add, Picture, x100 y20 w50 h50, %A_WorkingDir%\yewgrey.png
+
+Gui, Add, Picture, x100 y20 w50 h50, %A_WorkingDir%\FaladorGrow.png
+sleep, 4500
+SoundBeep, ,500
+sleep, 500
+SoundBeep, ,500
+Gui, Add, Picture, x100 y100 w50 h50, %A_WorkingDir%\Falador.png
+Gui, Add, Text, x100 y85 w50 left, READY
+sleep, 500
+Msgbox, Your Falador herb patch is ready to be harvested.  
 return
 
 Toggle4:
-sleep, 300
-Gui, Add, Picture, x150 y20 w50 h50, %A_WorkingDir%\yew.png
-sleep, 300
-Gui, Add, Picture, x150 y20 w50 h50, %A_WorkingDir%\yewgrey.png
+Gui, Add, Picture, x150 y20 w50 h50, %A_WorkingDir%\ArdougneGrow.png
+sleep, 4500
+SoundBeep, ,500
+sleep, 500
+SoundBeep, ,500
+Gui, Add, Picture, x150 y100 w50 h50, %A_WorkingDir%\Ardougne.png
+Gui, Add, Text, x150 y85 w50 left, READY
+sleep, 500
+Msgbox, Your Ardougne herb patch is ready to be harvested.  
 return
 
 Toggle5:
-sleep, 300
-Gui, Add, Picture, x200 y20 w50 h50, %A_WorkingDir%\yew.png
-sleep, 300
-Gui, Add, Picture, x200 y20 w50 h50, %A_WorkingDir%\yewgrey.png
+Gui, Add, Picture, x200 y20 w50 h50, %A_WorkingDir%\HosidiusGrow.png
+sleep, 4500
+SoundBeep, ,500
+sleep, 500
+SoundBeep, ,500
+Gui, Add, Picture, x200 y100 w50 h50, %A_WorkingDir%\Hosidius.png
+Gui, Add, Text, x200 y85 w50 left, READY
+sleep, 500
+Msgbox, Your Hosidius herb patch is ready to be harvested.  
 return
