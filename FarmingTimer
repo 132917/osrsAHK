@@ -76,7 +76,7 @@ return
 Toggle1:
 
 Gui, Add, Picture, x0 y20 w50 h50, %A_WorkingDir%\CanifisGrow.png
-sleep, 4500
+sleep, 4500000
 SoundBeep, ,500
 sleep, 500
 SoundBeep, ,500
@@ -97,7 +97,7 @@ return
 
 Toggle2:
 Gui, Add, Picture, x50 y20 w50 h50, %A_WorkingDir%\CamelotGrow.png
-sleep, 4500
+sleep, 4500000
 SoundBeep, ,500
 sleep, 500
 SoundBeep, ,500
@@ -114,7 +114,7 @@ return
 Toggle3:
 
 Gui, Add, Picture, x100 y20 w50 h50, %A_WorkingDir%\FaladorGrow.png
-sleep, 4500
+sleep, 4500000
 SoundBeep, ,500
 sleep, 500
 SoundBeep, ,500
@@ -126,7 +126,7 @@ return
 
 Toggle4:
 Gui, Add, Picture, x150 y20 w50 h50, %A_WorkingDir%\ArdougneGrow.png
-sleep, 4500
+sleep, 4500000
 SoundBeep, ,500
 sleep, 500
 SoundBeep, ,500
@@ -138,7 +138,7 @@ return
 
 Toggle5:
 Gui, Add, Picture, x200 y20 w50 h50, %A_WorkingDir%\HosidiusGrow.png
-sleep, 4500
+sleep, 4500000
 SoundBeep, ,500
 sleep, 500
 SoundBeep, ,500
